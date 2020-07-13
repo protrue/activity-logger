@@ -1,0 +1,17 @@
+﻿<controls:ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="https://github.com/avaloniaui"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+    <system:String x:Key="ApplicationTitle">ActivityLogger</system:String>
+    <system:String x:Key="TabDayTitle">День</system:String>
+    <system:String x:Key="TabIntervalTitle">Интервал</system:String>
+    <system:String x:Key="TabPlanTitle">План</system:String>
+    <system:String x:Key="TabSettingsTitle">Настройки</system:String>
+    <system:String x:Key="DaySelection">Выбор дня</system:String>
+    <system:String x:Key="Today">Сегодня</system:String>
+    <system:String x:Key="Yesterday">Вчера</system:String>
+    <system:String x:Key="DayBeforeYesterday">Позавчера</system:String>
+    <system:String x:Key="CustomDay">Другой</system:String>
+
+</controls:ResourceDictionary>

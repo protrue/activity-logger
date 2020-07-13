@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>ActivityLogger.Gui</AssemblyName>
+    <RootNamespace>ActivityLogger.Gui</RootNamespace>
+    <Company>ActivityLogger.Gui</Company>
+    <Product>ActivityLogger.Gui</Product>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Include="Assets\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="Controls\CustomDatePicker.xaml" />
+    <AvaloniaResource Remove="Controls\IntervalBar.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controls\CustomDatePicker.xaml" />
+    <None Remove="Controls\IntervalBar.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActivityLogger.ViewModel\ActivityLogger.ViewModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CustomDatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\IntervalBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
